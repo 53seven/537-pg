@@ -1,6 +1,6 @@
 {
   "name": "@537/pg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "simple db adapter",
   "main": "connection.js",
   "scripts": {
