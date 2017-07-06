@@ -20,7 +20,7 @@ const config = {
 const pool = new pg.Pool(config);
 
 function many(query, callback) {
-  let q = typeof query.toQuery === 'string' ? query.toQuery() : query;
+  let q = typeof query.toQuery === 'function' ? query.toQuery() : query;
   // to run a query we can acquire a client from the pool,
   // run a query on the client, and then return the client to the pool
   pool.connect((err, client, done) => {
